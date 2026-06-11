@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YF Growth Studio — AI-Managed Google Ads, SEO &amp; E-commerce Automation</title>
+<meta name="description" content="AI-managed Google Ads, SEO systems and e-commerce automation for online stores — built and run by a hands-on cross-border e-commerce operator.">
+<style>
+  :root{
+    --ink:#0e1726; --ink-2:#3d4a5c; --muted:#69788c;
+    --bg:#ffffff; --bg-soft:#f4f7fb; --line:#e3e9f1;
+    --brand:#1452f0; --brand-dark:#0d3bb0; --accent:#0ca678;
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+  a{color:var(--brand);text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  header{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:800;font-size:1.05rem;letter-spacing:.2px;color:var(--ink)}
+  .logo span{color:var(--brand)}
+  .nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+  .nav a{color:var(--ink-2);font-size:.95rem}
+  .nav a:hover{color:var(--brand)}
+  .nav .lang{border:1px solid var(--line);padding:4px 12px;border-radius:999px;font-size:.85rem}
+
+  .hero{padding:88px 0 72px;background:
+    radial-gradient(1200px 500px at 80% -10%, #e8efff 0%, transparent 60%),
+    radial-gradient(900px 400px at 10% 110%, #e6faf3 0%, transparent 55%)}
+  .kicker{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);background:#e8efff;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+  h1{font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.15;letter-spacing:-.5px;max-width:21ch}
+  .hero p.sub{margin:22px 0 34px;font-size:1.13rem;color:var(--ink-2);max-width:62ch}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:600;font-size:.98rem;transition:.18s}
+  .btn-primary{background:var(--brand);color:#fff}
+  .btn-primary:hover{background:var(--brand-dark)}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+  .stack{margin-top:46px;display:flex;gap:10px 26px;flex-wrap:wrap;color:var(--muted);font-size:.88rem}
+  .stack b{color:var(--ink-2);font-weight:600}
+
+  section{padding:78px 0}
+  section.soft{background:var(--bg-soft)}
+  .sec-head{max-width:60ch;margin-bottom:44px}
+  .sec-head h2{font-size:clamp(1.5rem,2.8vw,2.1rem);letter-spacing:-.3px;margin-bottom:12px}
+  .sec-head p{color:var(--ink-2)}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:860px){.grid3{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;display:flex;flex-direction:column}
+  .soft .card{box-shadow:0 1px 2px rgba(14,23,38,.04)}
+  .card .tag{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .card h3{font-size:1.18rem;margin-bottom:10px;letter-spacing:-.2px}
+  .card p{color:var(--ink-2);font-size:.95rem}
+  .card ul{margin:16px 0 0 0;list-style:none}
+  .card li{padding-left:24px;position:relative;color:var(--ink-2);font-size:.92rem;margin-bottom:9px}
+  .card li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .card .fee{margin-top:auto;padding-top:18px;font-size:.86rem;color:var(--muted)}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}
+  @media(max-width:860px){.steps{grid-template-columns:1fr}}
+  .step{padding:26px;border-radius:var(--radius);background:#fff;border:1px solid var(--line)}
+  .step::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-weight:800;font-size:1.6rem;color:#cdd9ee;display:block;margin-bottom:10px}
+  .step h4{margin-bottom:8px}
+  .step p{font-size:.92rem;color:var(--ink-2)}
+
+  .case{border-left:4px solid var(--brand)}
+  .case .meta{font-size:.8rem;color:var(--muted);margin-bottom:10px}
+  .num-row{display:flex;gap:34px;flex-wrap:wrap;margin-top:18px}
+  .num b{display:block;font-size:1.45rem;color:var(--ink);letter-spacing:-.4px}
+  .num span{font-size:.8rem;color:var(--muted)}
+
+  .about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+  @media(max-width:860px){.about{grid-template-columns:1fr}}
+  .about p{color:var(--ink-2);margin-bottom:14px}
+  .principles{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .principles h4{margin-bottom:14px}
+  .principles li{list-style:none;padding-left:24px;position:relative;font-size:.92rem;color:var(--ink-2);margin-bottom:10px}
+  .principles li::before{content:"—";position:absolute;left:0;color:var(--brand);font-weight:700}
+
+  .contact{background:linear-gradient(135deg,#0e1726 0%,#15244a 100%);color:#fff;border-radius:20px;padding:56px 48px;text-align:center}
+  .contact h2{font-size:clamp(1.5rem,2.8vw,2rem);margin-bottom:12px}
+  .contact p{color:#b9c6dd;max-width:54ch;margin:0 auto 30px}
+  .contact .channels{margin-top:26px;font-size:.9rem;color:#8fa1bf}
+  .contact .channels b{color:#dbe5f5;font-weight:600}
+
+  footer{padding:34px 0 44px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:gap;gap:10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">YF <span>Growth Studio</span></div>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Case Studies</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="lang" href="zh.html">中文</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="kicker">AI systems · Human guardrails</span>
+    <h1>AI that runs your ads, SEO and store ops — supervised by an operator who's done it at scale.</h1>
+    <p class="sub">I'm a hands-on e-commerce operator in the Australian market. I build AI-driven systems that handle the repetitive 80% of Google Ads management, SEO and store operations — with human review gates on every decision that spends money.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contact">Book a free 30-min audit</a>
+      <a class="btn btn-ghost" href="#work">See what I've built</a>
+    </div>
+    <div class="stack">
+      <span><b>Google Ads API</b></span><span><b>Shopify</b></span><span><b>Claude AI agents</b></span><span><b>Python / FastAPI</b></span><span><b>GA4 &amp; GAQL</b></span>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Productized services</h2>
+      <p>No hourly billing, no vague retainers. Each service is a defined system with defined deliverables.</p>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="tag">Monthly retainer</div>
+        <h3>AI-Managed Google Ads</h3>
+        <p>Your accounts plugged into a live monitoring &amp; optimization loop, supervised weekly by me.</p>
+        <ul>
+          <li>Real-time dashboard wired to the Google Ads API</li>
+          <li>Automated anomaly detection: low ROAS, low CTR, zero-conversion spend, status issues</li>
+          <li>Search-term mining → negative keyword proposals</li>
+          <li>Budget pacing &amp; overspend alerts</li>
+          <li>Every change above a risk threshold needs human sign-off</li>
+        </ul>
+        <div class="fee">Per store / month · cancel anytime</div>
+      </div>
+      <div class="card">
+        <div class="tag">One-off + optional retainer</div>
+        <h3>SEO Health Check &amp; System</h3>
+        <p>A repeatable SEO operating system — not a 40-page audit PDF that nobody acts on.</p>
+        <ul>
+          <li>Technical diagnostics &amp; on-page fixes</li>
+          <li>Keyword research validated against real search volume</li>
+          <li>Category &amp; landing page optimization workflow</li>
+          <li>Content, backlink and GBP playbooks</li>
+          <li>Monthly reporting you can read in 5 minutes</li>
+        </ul>
+        <div class="fee">Fixed-price audit · optional monthly system</div>
+      </div>
+      <div class="card">
+        <div class="tag">Project</div>
+        <h3>E-commerce AI Automation</h3>
+        <p>Custom AI agent pipelines for the operations that eat your team's week.</p>
+        <ul>
+          <li>Product selection scans &amp; scoring</li>
+          <li>Bulk listing to Shopify with content generation</li>
+          <li>Cost-based pricing floors &amp; repricing logic</li>
+          <li>Inventory &amp; order monitoring with alerting</li>
+          <li>Built on your stack — you own everything</li>
+        </ul>
+        <div class="fee">Scoped &amp; quoted per project</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How it works</h2>
+      <p>The same architecture I run internally: AI does the volume, a human owns the judgment.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h4>Audit</h4><p>Free 30-minute call plus a read-only look at your account. You get a written list of what's leaking money or rankings — whether or not we work together.</p></div>
+      <div class="step"><h4>System</h4><p>I wire up the monitoring, automation and reporting around your store. Everything runs in your accounts, on your data — no lock-in.</p></div>
+      <div class="step"><h4>Supervised loop</h4><p>AI proposes, human approves. Routine optimizations run on schedule; anything that spends money or changes strategy passes a review gate first.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Case studies</h2>
+      <p>Systems I designed and shipped as GM &amp; co-founder of an Australian cross-border e-commerce group. Details anonymized; architecture and numbers are real.</p>
+    </div>
+    <div class="grid3">
+      <div class="card case">
+        <div class="meta">Google Ads · Multi-store</div>
+        <h3>Real-time ads monitoring across 9 storefronts</h3>
+        <p>One MCC, one live dashboard pulling campaign data straight from the Google Ads API. Four-bucket anomaly detection (ROAS, CTR, zero-conversion, status) flags problems automatically — replacing the daily manual check across 9 Shopify stores.</p>
+        <div class="num-row">
+          <div class="num"><b>9</b><span>stores, one view</span></div>
+          <div class="num"><b>4</b><span>anomaly classes auto-flagged</span></div>
+        </div>
+      </div>
+      <div class="card case">
+        <div class="meta">SEO · Tooling</div>
+        <h3>A 22-tool SEO workbench, organized by stage</h3>
+        <p>Keyword research, category-page optimization, content, backlinks, technical diagnostics, Google Business Profile and monthly reporting — 22 tools across 7 stages, with approval-gated publishing so AI-generated changes never go live unreviewed.</p>
+        <div class="num-row">
+          <div class="num"><b>22</b><span>tools</span></div>
+          <div class="num"><b>7</b><span>workflow stages</span></div>
+        </div>
+      </div>
+      <div class="card case">
+        <div class="meta">Automation · Agents</div>
+        <h3>Full-pipeline store automation with AI agents</h3>
+        <p>Weekly product-selection scans that screen the catalog and score candidates, bulk listing to Shopify, cost-based pricing floors and inventory monitoring — orchestrated through an internal API platform with 100+ tools, executed by Claude-based agents.</p>
+        <div class="num-row">
+          <div class="num"><b>60k+</b><span>SKU catalog handled</span></div>
+          <div class="num"><b>100+</b><span>internal API tools</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <div class="sec-head" style="margin-bottom:20px"><h2>Why an operator, not an agency</h2></div>
+      <p>I'm Yufan — GM and co-founder of a cross-border e-commerce group selling into Australia. My day job is running multi-store P&amp;L: selection, listing, pricing, inventory, ads and SEO. The systems on this page weren't built for clients first — they were built because I needed them myself.</p>
+      <p>Agencies sell you hours. I sell you the system I already run: AI agents doing the repetitive work at machine speed, with the judgment calls kept human. You get senior-operator attention without paying an agency's overhead.</p>
+      <p>I work in English and Chinese, on Australian time-friendly hours.</p>
+    </div>
+    <div class="principles">
+      <h4>Working principles</h4>
+      <ul>
+        <li>Your accounts, your data, your tooling — zero lock-in</li>
+        <li>AI proposes, human approves: spend changes always pass a review gate</li>
+        <li>Stability over tinkering — smart bidding needs calm, not daily resets</li>
+        <li>Reports you can read in five minutes, not forty pages</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Get a free 30-minute audit</h2>
+      <p>Tell me what you sell and where it hurts — ads, SEO or operations. You'll get an honest read on whether a system is worth building, and a written summary either way.</p>
+      <a class="btn btn-primary" href="mailto:jiangyufan718@gmail.com?subject=Free%20audit%20request">Email me</a>
+      <div class="channels">
+        <b>Email</b> jiangyufan718@gmail.com &nbsp;·&nbsp; <b>Phone</b> +86 151 5813 2411
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+    <span>© 2026 YF Growth Studio</span>
+    <span><a href="zh.html">中文</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
