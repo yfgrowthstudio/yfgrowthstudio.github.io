@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工作原理 — YF Growth Studio</title>
+<meta name="description" content="一张图看懂电商 AI 中台:四类需求(投放/SEO/建站/电商运营)进一个平台,AI 跑量、人审批每个花钱的决策。">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .diagram{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-top:8px}
+  .diagram img{width:100%;height:auto;display:block}
+  .pipe-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  @media(max-width:760px){.pipe-grid{grid-template-columns:1fr}}
+  .pipe h3{font-size:1.1rem;margin-bottom:6px}
+  .pipe .who{font-size:.86rem;color:var(--muted);margin-bottom:12px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="zh.html">YF <span>Growth Studio</span></a>
+    <ul>
+      <li><a href="zh.html">首页</a></li>
+      <li><a href="how-it-works.html" class="active">工作原理</a></li>
+      <li><a href="zh.html#services">服务</a></li>
+      <li><a href="zh.html#contact">联系</a></li>
+      <li><a class="lang" href="index.html">EN</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="pagehead">
+  <div class="wrap">
+    <div class="eyebrow">工作原理</div>
+    <h1>一个中台,四类需求,AI 跑量、人把关。</h1>
+    <p>你的投放、SEO、建站、电商运营,本质是同一个电商 AI 中台的四个入口。下面这张总图,就是我在一个真实多店运营上跑着的架构(已匿名)。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">总架构</div>
+      <h2>四类需求 → 一个 AI 中台 → 人工把关 → 成交</h2>
+      <p>四条管线共用同一份数据(唯一数据源),任务排队后派给本地 AI agent 跑;每个花钱、发布的动作都先过人工审批门——这是「自动化的效率」和「不失控的安全」兼得的关键。</p>
+    </div>
+    <div class="diagram">
+      <img src="assets/diagrams/arch_overview_zh.svg" alt="电商 AI 中台总架构图:四类需求进一个平台,经数据中台、联邦派发、四大能力管线、人工审批门,产出成交">
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">四条管线</div>
+      <h2>每个环节单独拆开看</h2>
+      <p>同一条主线贯穿四条管线:<b>绿色 = AI 自动跑,黄色 = 你审批花钱/发布的动作。</b></p>
+    </div>
+    <div class="pipe-grid">
+      <div class="pipe">
+        <h3>① 投放</h3>
+        <div class="who">Google Ads · 账户到监控全链路</div>
+        <div class="diagram"><img src="assets/diagrams/pipeline_ads_zh.svg" alt="投放管线:账户追踪搭建、广告搭建、学习期、实时异常监控、审批花钱、周优化月报"></div>
+      </div>
+      <div class="pipe">
+        <h3>② SEO</h3>
+        <div class="who">关键词到排名 · 发布前审批</div>
+        <div class="diagram"><img src="assets/diagrams/pipeline_seo_zh.svg" alt="SEO 管线:诊断、关键词地图、页面优化、内容外链GBP、发布前审批、月度报告"></div>
+      </div>
+      <div class="pipe">
+        <h3>③ 建站</h3>
+        <div class="who">Shopify / WordPress · 上线你签字</div>
+        <div class="diagram"><img src="assets/diagrams/pipeline_build_zh.svg" alt="建站管线:需求梳理、搭建店铺、追踪与SEO地基、上线评审、优化迭代"></div>
+      </div>
+      <div class="pipe">
+        <h3>④ 电商运营 / 上架</h3>
+        <div class="who">货盘到批量上架 · 永不亏本价</div>
+        <div class="diagram"><img src="assets/diagrams/pipeline_listing_zh.svg" alt="电商上架管线:货盘扫描、适配度打分、内容生成、按成本定价、上架前审批、批量上架监控"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="band">
+      <h2>想把这套系统搭进你的店?</h2>
+      <p>先约一次免费体检。我告诉你哪条管线最值得先上,以及落地要花多少功夫。</p>
+      <a class="btn btn-primary" href="zh.html#contact">约一次免费体检</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 YF Growth Studio · 操盘手自建的电商 AI</span>
+    <div class="fnav">
+      <a href="zh.html">首页</a>
+      <a href="how-it-works.html">工作原理</a>
+      <a href="index.html">English</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
